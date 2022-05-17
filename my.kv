@@ -1,0 +1,94 @@
+WindowManager:
+    WeekWindow:
+    DayWindow:
+    MenuWindow:
+
+<WeekWindow>:
+    name: "week"
+
+    GridLayout:
+        cols:1
+
+        GridLayout:
+            cols: 1
+
+            Label:
+                text: "Week"
+
+        GridLayout:
+            cols: 3
+
+            Button:
+                text: "Day"
+                on_release:
+                    app.root.current = "day"
+                    root.manager.transition.direction = "right"
+            Button:
+                text: "Week"
+                on_release:
+                    app.root.current = "week"
+                    root.manager.transition.direction = "left"
+            Button:
+                text: "Menu"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "left"
+
+
+
+<DayWindow>:
+    name: "day"
+
+    GridLayout:
+        cols: 1
+
+        Label:
+            text: "Day"
+
+        GridLayout:
+            cols: 3
+
+            Button:
+                text: "Day"
+                on_release:
+                    app.root.current = "day"
+                    root.manager.transition.direction = "right"
+            Button:
+                text: "Week"
+                on_release:
+                    app.root.current = "week"
+                    root.manager.transition.direction = "left"
+            Button:
+                text: "Menu"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "left"
+
+
+<MenuWindow>:
+    name: "menu"
+
+    GridLayout:
+        cols: 1
+
+        Label:
+            text: "Menu"
+
+        GridLayout:
+            cols: 3
+
+            Button:
+                text: "Day"
+                on_release:
+                    app.root.current = "day"
+                    root.manager.transition.direction = "right"
+            Button:
+                text: "Week"
+                on_release:
+                    app.root.current = "week"
+                    root.manager.transition.direction = "left"
+            Button:
+                text: "Menu"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "left"
